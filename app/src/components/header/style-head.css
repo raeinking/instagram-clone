@@ -1,0 +1,32 @@
+.mainheader {
+    border-bottom: 1px solid rgb(206, 199, 199);
+    width: 100%;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 70px;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    width: 100%;
+    max-width: 935px;
+}
+.im-head {
+    width: 200px;
+    object-fit: contain;
+}
+.search-input {
+    border: none;
+    background-color:rgb(239,239,239);
+    padding:0.7rem 1rem;
+    border-radius: 10px;
+    width: 200px;
+}
+
+@media only screen and (max-width:980px) {
+    /* body {
+        display:none;
+    } */
+}

@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
-import Login from './components/login/Login'
-import Signup from './components/signup/Signup'
-import Main from './components/main/Main'
+import Login from './components/login/Login.js'
+import Signup from './components/signup/Signup.js'
+import Main from './components/main/Main.js'
 
 ReactDOM.render(
   <div className="div">
