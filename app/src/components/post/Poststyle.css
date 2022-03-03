@@ -1,0 +1,57 @@
+.headerspost {
+    display:flex;
+    background-color:antiquewhite;
+    justify-content:space-between
+}
+.rambo {
+    width: 100%;
+    object-fit: contain;
+}
+
+.iconspost {
+    display:flex;
+    align-items: center;
+    height: 30px;
+    margin: 10px 5px;
+    justify-content: space-between;
+}
+.imgs {
+    width: 20px;
+    object-fit: contain;
+    margin: 10px 10px;
+    cursor: pointer;
+}
+.like{
+    margin: 0 15px ;
+}
+.caption  {
+    margin: 10px 15px ;
+}
+.commentstopost{
+    width: 100%;
+    background-color: aqua;
+    position: relative;
+}
+.comment {
+    width: 90%;
+    padding: 10px 5px;
+    outline: none;
+    border: none;
+    border-top: 1px solid rgb(206, 199, 199);
+}
+.commentpost {
+    position: absolute;
+    right: 0; 
+    width: 10%;
+    padding: 10px 5px;
+    outline: none;
+    border: none;
+    border-top: 1px solid rgb(206, 199, 199);
+    cursor: pointer;
+    background-color: white;
+    color: rgb(0, 162, 255);
+}
+
+.comments {
+    margin: 0 0 20px 15px 
+}
