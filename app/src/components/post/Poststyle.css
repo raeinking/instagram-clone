@@ -1,11 +1,17 @@
 .headerspost {
     display:flex;
-    background-color:antiquewhite;
-    justify-content:space-between
+    justify-content:space-between;
+    align-items: center;
+    width:100%;
+}
+.ava {
+    margin-left:10px;
 }
 .rambo {
     width: 100%;
     object-fit: contain;
+    outline: none;
+    overflow: hidden;
 }
 
 .iconspost {
@@ -29,7 +35,7 @@
 }
 .commentstopost{
     width: 100%;
-    background-color: aqua;
+    background-color: white;
     position: relative;
 }
 .comment {
@@ -41,17 +47,18 @@
 }
 .commentpost {
     position: absolute;
-    right: 0; 
-    width: 10%;
+    right: 0px; 
+    width: 50px;
     padding: 10px 5px;
     outline: none;
     border: none;
     border-top: 1px solid rgb(206, 199, 199);
     cursor: pointer;
     background-color: white;
-    color: rgb(0, 162, 255);
+    color: 1px solid rgb(206, 199, 199);
+    
 }
 
 .comments {
-    margin: 0 0 20px 15px 
+    margin: 0 0 20px 15px; 
 }

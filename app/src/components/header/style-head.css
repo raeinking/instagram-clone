@@ -29,6 +29,15 @@
     width: 100%;
     height:30px;
 }
+.right-head {   
+    display: flex;
+} 
+.avahead {
+    margin-right: 10px;
+}
+
+
+
 @media only screen and (max-width:980px) {
     
 }

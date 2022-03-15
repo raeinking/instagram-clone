@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
+import axios from 'axios';
 import styled from 'styled-components';
 import '../post/Poststyle.css';
+import Stack from '@mui/material/Stack';
+import { deepOrange, deepPurple } from '@mui/material/colors';
+import { deepmerge } from '@mui/utils';
+import Avatar from '@mui/material/Avatar';
+
 
 function Post() {
+    
+
+
   return (
     <POST>
         <div className="headerspost">
-            <p className='pheder'>user</p>
+            <Avatar className='ava' sx={{ bgcolor: deepmerge[500] }} alt="Remy Sharp" src="/broken-image.jpg"></Avatar>
             <p className='pheder'>...</p>
         </div>
         <img className='rambo' src={require('../image/test.jpg')} />
@@ -23,10 +32,9 @@ function Post() {
         <div className="caption">caption</div>
         <div className="comments">
             user comments
-            
         </div>
         <div className="commentstopost">
-            <input className='comment' type="comment"  placeholder='Add a comment...' />
+            <input className='comment' type="text"  placeholder='Add a comment' />
             <input className='commentpost' type="button" value="Post" />
         </div>
     </POST>
@@ -35,8 +43,9 @@ function Post() {
 
 export default Post
 
+
 const POST = styled.div `
-width: 100%;
+width: 90%;
 max-width:600px;
 border: 1px solid #dbdbdb;
 position: relative;
