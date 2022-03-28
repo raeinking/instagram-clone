@@ -29,7 +29,6 @@ class Signup extends React.Component {
       data: db,
       config: { headers: {'Content-Type': 'multipart/form-data'} }
     }).then(function (res) {
-      console.log(res)
       alert('sccessfuly added to database')
     }).catch(function (res){
       console.log(res)

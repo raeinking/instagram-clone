@@ -12,7 +12,7 @@ function Main() {
     <div className='mainpage' >
         <Header />
         <Story />
-        <User />
+        {/* <User /> */}
         <Post />
         <Post />
         <Post />

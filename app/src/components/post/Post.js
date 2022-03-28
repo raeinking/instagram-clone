@@ -6,11 +6,14 @@ import Stack from '@mui/material/Stack';
 import { deepOrange, deepPurple } from '@mui/material/colors';
 import { deepmerge } from '@mui/utils';
 import Avatar from '@mui/material/Avatar';
+import UserEverything from '../login/Login'
 
 
 function Post() {
     
-
+    function aspp() {
+        console.log(UserEverything)
+    }
 
   return (
     <POST>
@@ -35,7 +38,7 @@ function Post() {
         </div>
         <div className="commentstopost">
             <input className='comment' type="text"  placeholder='Add a comment' />
-            <input className='commentpost' type="button" value="Post" />
+            <input onClick={aspp} className='commentpost' type="button" value="Post" />
         </div>
     </POST>
   )
