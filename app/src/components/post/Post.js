@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect , useState } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 import '../post/Poststyle.css';
@@ -7,16 +7,25 @@ import { deepOrange, deepPurple } from '@mui/material/colors';
 import { deepmerge } from '@mui/utils';
 import Avatar from '@mui/material/Avatar';
 import UserEverything from '../login/Login'
+import { db } from '../data/firebase';
 
 
 function Post() {
+    const [Posts , setPosts] = useState([])
     
-    function aspp() {
-        console.log(UserEverything)
-    }
+    useEffect(() => {
+        db.collection('posts').onSnapshot( e => {
+            setPosts(e.docs.map(doc => ({
+                id: doc.id,
+                Post: doc.data()
+            })))
+        })
+    }, [])
 
   return (
     <POST>
+        
+        <hr />
         <div className="headerspost">
             <Avatar className='ava' sx={{ bgcolor: deepmerge[500] }} alt="Remy Sharp" src="/broken-image.jpg"></Avatar>
             <p className='pheder'>...</p>
