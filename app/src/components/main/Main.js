@@ -14,9 +14,6 @@ function Main() {
         <Story />
         {/* <User /> */}
         <Post />
-        <Post />
-        <Post />
-        <Post />
     </div>
   )
 }

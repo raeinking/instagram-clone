@@ -1,30 +1,31 @@
 import React, { Component, useEffect , useState } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import styled from 'styled-components';
 import '../post/Poststyle.css';
-import Stack from '@mui/material/Stack';
-import { deepOrange, deepPurple } from '@mui/material/colors';
+// import Stack from '@mui/material/Stack';
+// import { deepOrange, deepPurple } from '@mui/material/colors';
 import { deepmerge } from '@mui/utils';
 import Avatar from '@mui/material/Avatar';
-import UserEverything from '../login/Login'
-import { db } from '../data/firebase';
+// import UserEverything from '../login/Login'
+import { db } from '../data/firebase.js';
 
 
 function Post() {
     const [Posts , setPosts] = useState([])
     
     useEffect(() => {
-        db.collection('posts').onSnapshot( e => {
-            setPosts(e.docs.map(doc => ({
-                id: doc.id,
-                Post: doc.data()
-            })))
+        db.collection('posts').onSnapshot( snapshot => {
+            setPosts(snapshot.docs.map(doc => 
+                console.log(doc.data())
+            ))
         })
     }, [])
 
   return (
     <POST>
-        
+        {Posts.map( post => {
+            console.log('asdf') 
+        })}
         <hr />
         <div className="headerspost">
             <Avatar className='ava' sx={{ bgcolor: deepmerge[500] }} alt="Remy Sharp" src="/broken-image.jpg"></Avatar>
@@ -47,7 +48,7 @@ function Post() {
         </div>
         <div className="commentstopost">
             <input className='comment' type="text"  placeholder='Add a comment' />
-            <input onClick={aspp} className='commentpost' type="button" value="Post" />
+            {/* <input onClick={aspp} className='commentpost' type="button" value="Post" /> */}
         </div>
     </POST>
   )
