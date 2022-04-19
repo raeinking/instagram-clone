@@ -7,31 +7,19 @@ import '../post/Poststyle.css';
 import { deepmerge } from '@mui/utils';
 import Avatar from '@mui/material/Avatar';
 // import UserEverything from '../login/Login'
-import { db } from '../data/firebase.js';
 
 
-function Post() {
-    const [Posts , setPosts] = useState([])
+function Post({username , caption ,urlimg}) {
     
-    useEffect(() => {
-        db.collection('posts').onSnapshot( snapshot => {
-            setPosts(snapshot.docs.map(doc => 
-                console.log(doc.data())
-            ))
-        })
-    }, [])
 
   return (
     <POST>
-        {Posts.map( post => {
-            console.log('asdf') 
-        })}
         <hr />
         <div className="headerspost">
-            <Avatar className='ava' sx={{ bgcolor: deepmerge[500] }} alt="Remy Sharp" src="/broken-image.jpg"></Avatar>
+            <Avatar className='ava' sx={{ bgcolor: deepmerge[500] }} alt="Remy Sharp" src="/broken-image.jpg">{username}</Avatar>
             <p className='pheder'>...</p>
         </div>
-        <img className='rambo' src={require('../image/test.jpg')} />
+        <img className='rambo' src={urlimg} />
 
         <div className="iconspost">
             <div className="lefticon">
@@ -42,7 +30,7 @@ function Post() {
             <div className="righticon"> <img className='imgs' src={require('../image/save-instagram.png')} /></div>
         </div>
         <div className="like">1000 likes</div>
-        <div className="caption">caption</div>
+        <div className="caption">{caption}</div>
         <div className="comments">
             user comments
         </div>
