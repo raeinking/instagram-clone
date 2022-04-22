@@ -16,11 +16,10 @@ function Post({username , caption ,urlimg}) {
     <POST>
         <hr />
         <div className="headerspost">
-            <Avatar className='ava' sx={{ bgcolor: deepmerge[500] }} alt="Remy Sharp" src="/broken-image.jpg">{username}</Avatar>
+            <Avatar className='ava' sx={{ bgcolor: deepmerge[500] }} alt={username} src="/broken-image.jpg"></Avatar> 
             <p className='pheder'>...</p>
         </div>
         <img className='rambo' src={urlimg} />
-
         <div className="iconspost">
             <div className="lefticon">
                 <img className='imgs' src={require('../image/heart.png')} />
@@ -36,7 +35,7 @@ function Post({username , caption ,urlimg}) {
         </div>
         <div className="commentstopost">
             <input className='comment' type="text"  placeholder='Add a comment' />
-            {/* <input onClick={aspp} className='commentpost' type="button" value="Post" /> */}
+            <input className='commentpost' type="button" value="Post" />
         </div>
     </POST>
   )
