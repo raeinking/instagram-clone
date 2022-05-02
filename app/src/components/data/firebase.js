@@ -1,17 +1,17 @@
-import { initializeApp } from 'firebase/app'
-import { getFirestore } from '@firebase/firestore'
+import { initializeApp } from "firebase/app";
+
 const firebaseConfig = {
-  apiKey: "AIzaSyB2NMwBd79Ez7d7zKM6xPPbi3PRx25CYZM",
-  authDomain: "instagram-clone-398ff.firebaseapp.com",
-  projectId: "instagram-clone-398ff",
-  storageBucket: "instagram-clone-398ff.appspot.com",
-  messagingSenderId: "441609255550",
-  appId: "1:441609255550:web:429aa0d46cb1b4a152762f",
-  measurementId: "G-XVTRM3NXLE"
+  apiKey: "AIzaSyCFLm_HZ1Sy-Hhl4Vq5fw22g_9Uqi3vfG4",
+  authDomain: "vvvv-4405e.firebaseapp.com",
+  projectId: "vvvv-4405e",
+  storageBucket: "vvvv-4405e.appspot.com",
+  messagingSenderId: "1017413699734",
+  appId: "1:1017413699734:web:17ea939af519e1e15d1ab7",
+  measurementId: "G-7P4Z2561V7"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app)
 
-export default db
+initializeApp(firebaseConfig);
+
+
+
