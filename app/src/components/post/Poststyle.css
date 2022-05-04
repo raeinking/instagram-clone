@@ -31,10 +31,9 @@
     margin: 0 15px ;
 }
 .caption  {
-    max-width: 100px;
-    overflow-wrap: break-word;
-    /* inline-size: 100px; */
+    padding: 0.5rem 0 0.5rem 5%;
     width: 90%;
+    word-wrap: break-word;
 }
 .commentstopost{
     background-color: white;

@@ -20,9 +20,8 @@ function Main() {
     const po = async () =>  {
       const data = await getDocs(pos)
       setPosts(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
-      console.log()
+      console.log(Posts)
     }
-
     po()
   }, [Posts])
 

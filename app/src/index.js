@@ -5,6 +5,7 @@ import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import Login from './components/login/Login.js'
 import Signup from './components/signup/Signup.js'
 import Main from './components/main/Main.js'
+import Addpost from '../src/components/addpost/Addpost'
 
 
 
@@ -15,6 +16,7 @@ ReactDOM.render(
         <Route path='/' element={<Main />}/>
         <Route path='login' element={<Login />}/>
         <Route path='Signup' element={<Signup />}/>
+        <Route path='Addpost' element={<Addpost />}/>
       </Routes>
     </BrowserRouter>
   </div>
