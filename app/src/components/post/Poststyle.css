@@ -31,10 +31,12 @@
     margin: 0 15px ;
 }
 .caption  {
-    margin: 10px 15px ;
+    max-width: 100px;
+    overflow-wrap: break-word;
+    /* inline-size: 100px; */
+    width: 90%;
 }
 .commentstopost{
-    width: 100%;
     background-color: white;
     position: relative;
 }

@@ -3,7 +3,7 @@ import '../signup/sign.css'
 import styled from 'styled-components'
 import axios from 'axios'
 import auth from '../data/firebase'
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword , updateProfile} from "firebase/auth";
 
 
 
@@ -16,9 +16,12 @@ function Signup () {
     e.preventDefault()
     const email = document.querySelector('#email').value
     const password = document.querySelector('#password').value
+    const username = document.querySelector('#username').value
     createUserWithEmailAndPassword(auth , email , password)
-    .then((user) => alert('user created'))
-    .catch(err => alert(err.code))
+    .then((user) => updateProfile(auth.currentUser, {
+      displayName: username
+    }))
+    .catch(err => err.code)
   }
 
   

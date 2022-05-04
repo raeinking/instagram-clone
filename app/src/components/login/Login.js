@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import '../login/login.css'
 import styled from 'styled-components'
 import axios from 'axios'
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword , onAuthStateChanged  } from "firebase/auth";
 
 function Login() {
   const [Email , setEmail] = useState('')
@@ -11,12 +11,24 @@ function Login() {
   const [user , setUser] = useState(null)
 
   const auth = getAuth();
+
+  useEffect(() => {
+    auth.onAuthStateChanged((authuser) => {
+      if (authuser) {
+        if (setUser())
+        setUser(authuser)
+        console.log(authuser);
+      } else {
+        setUser(null)
+      }
+    })
+  }, [user])
   const log = (e) => {
     e.preventDefault();
     const email = document.querySelector('#email').value
     const password = document.querySelector('#password').value
     signInWithEmailAndPassword(auth, email, password)
-    .then(() => alert(auth.email))
+    .then(us => window.open('http://localhost:3000','_self'))
     .catch((error) => alert(error.code));
   }
 
@@ -32,7 +44,7 @@ function Login() {
         </form>
         <form className='sign'>
             <div className="main">
-              <p>Don't have an account?  <span><a href="Signup">  Sign up</a></span></p>
+              <p>Don't have an account? <span> <a href="Signup"> Sign up</a></span></p>
             </div>
         </form>
       </Main>

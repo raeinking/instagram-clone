@@ -53,4 +53,5 @@ display: flex;
 flex-direction: column;
 margin-top: 24px;
 background-color: #fff;
+flex-wrap: wrap;
 `

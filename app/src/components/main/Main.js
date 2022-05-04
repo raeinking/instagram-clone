@@ -3,37 +3,38 @@ import Header from '../header/Header'
 import Story from '../story/Story.js'
 import '../main/main.css'
 import Post from '../post/Post.js';
-import User from '../data/User.js'
+import { collection , getDocs } from "firebase/firestore";
+import db  from '../data/firebase';
+
+
 
 
 
 
 
 function Main() {
-  // const [Posts,setPosts]=useState([])
-  // const pos = collection(db, 'posts')
+  const [Posts,setPosts]=useState([])
+  const pos = collection(db, 'posts')
   
-  // useEffect( () => {
-  //   const po = async () =>  {
-  //     const data = await getDocs(pos)
-  //     setPosts(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
-  //   }
+  useEffect( () => {
+    const po = async () =>  {
+      const data = await getDocs(pos)
+      setPosts(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
+      console.log()
+    }
 
-  //   po()
-  // }, [])
+    po()
+  }, [Posts])
 
   return (
     <div className='mainpage' >
         <Header />
         <Story />
-        {/* <User /> */}
-        {/* {Posts.map((doc) => {
+        {Posts.map((doc) => {
           return (
             <Post key={doc.id} username={doc.username} caption={doc.caption} urlimg={doc.urlimg} />
-          ) */}
-        {/* } */}
-        {/* ) */}
-        {/* } */}
+          )}
+        )}
     </div>
   )
 }
