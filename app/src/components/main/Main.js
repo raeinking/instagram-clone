@@ -23,7 +23,7 @@ function Main() {
       console.log(Posts)
     }
     po()
-  }, [Posts])
+  }, [])
 
   return (
     <div className='mainpage' >

@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import '../login/login.css'
 import styled from 'styled-components'
 import axios from 'axios'
-import { getAuth, signInWithEmailAndPassword , onAuthStateChanged  } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword , onAuthStateChanged } from "firebase/auth";
 
 function Login() {
   const [Email , setEmail] = useState('')
