@@ -48,9 +48,9 @@ function Addpost() {
             console.log('Upload is running');
             break;
         }
-      }, 
+      })
 
-
+a
 
 
 
