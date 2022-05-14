@@ -12,7 +12,6 @@ import db  from '../data/firebase';
 
 
 function Main() {
-  const a = a
   const [Posts,setPosts]=useState([])
   const pos = collection(db, 'posts')
   
@@ -36,6 +35,6 @@ function Main() {
         )}
     </div>
   )
-}
+}a
 
 export default Main

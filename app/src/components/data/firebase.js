@@ -13,7 +13,7 @@ const firebaseConfig = {
   appId: "1:441609255550:web:429aa0d46cb1b4a152762f",
   measurementId: "G-XVTRM3NXLE"
 };
-const app = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 const db = getFirestore()
 
 export default db
