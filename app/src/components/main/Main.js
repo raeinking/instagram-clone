@@ -35,6 +35,6 @@ function Main() {
         )}
     </div>
   )
-}a
+}
 
 export default Main
