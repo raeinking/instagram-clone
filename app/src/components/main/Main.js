@@ -32,7 +32,7 @@ function Main() {
           return (
             <Post key={doc.id} username={doc.username} caption={doc.caption} urlimg={doc.urlimg} />
           )}
-        )}
+        )}a
     </div>
   )A
 }
