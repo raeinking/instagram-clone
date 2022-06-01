@@ -21,7 +21,7 @@ function Main() {
       setPosts(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
       console.log(Posts)
     }
-    po()a
+    po()
   }, [])
 
   return (
