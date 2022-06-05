@@ -28,7 +28,7 @@ function Main() {
     <div className='mainpage' >
         <Header />
         <Story />
-        {Posts.map((doc) => {a
+        {Posts.map((doc) => {
           return (
             <Post key={doc.id} username={doc.username} caption={doc.caption} urlimg={doc.urlimg} />
           )}
