@@ -24,7 +24,7 @@ function Signup () {
     .catch(err => err.code)
   }
 
-  a
+  
   
 return (
   <Main >
